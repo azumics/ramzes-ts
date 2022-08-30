@@ -1,0 +1,58 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660252315664' stop='1660252376279'>
+    <name>Base page test</name>
+    <title>Base page test</title>
+    <test-cases>
+        <test-case start='1660252315665' status='passed' stop='1660252315941'>
+            <name>GET test request /api/users/2</name>
+            <title>GET test request /api/users/2</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-96.0.4664.45'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1660252315942' status='passed' stop='1660252316271'>
+            <name>POST test request</name>
+            <title>POST test request</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-96.0.4664.45'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1660252316272' status='broken' stop='1660252376278'>
+            <name>MOCK test request</name>
+            <title>MOCK test request</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-96.0.4664.45'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timeout of 60000ms exceeded. The execution in the test "Base page test MOCK test request" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (/home/vladimir/wdio-project/test/specs/apitest.ts)</message>
+                <stack-trace>Error: Timeout of 60000ms exceeded. The execution in the test "Base page test MOCK test request" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (/home/vladimir/wdio-project/test/specs/apitest.ts)
+                    at createTimeoutError (/home/vladimir/wdio-project/node_modules/mocha/lib/errors.js:498:15)
+                    at Test.Runnable._timeoutError (/home/vladimir/wdio-project/node_modules/mocha/lib/runnable.js:431:10)
+                    at Timeout.&lt;anonymous> (/home/vladimir/wdio-project/node_modules/mocha/lib/runnable.js:246:24)
+                    at listOnTimeout (node:internal/timers:556:17)
+                    at processTimers (node:internal/timers:499:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
