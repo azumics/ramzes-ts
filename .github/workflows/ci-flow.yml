@@ -2,13 +2,16 @@
 
 name: CI
 
-# Controls when the workflow will run
+# Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ "master" ]
+    branches:
+      - master
+
   pull_request:
-    branches: [ "master" ]
+    branches:
+      - master
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,15 +25,33 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: Checkout the code
+        uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Build docker and run tests
+        run: "make ci-up"
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Get allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Setup allure report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        id: allure-report
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+          keep_reports: 20
+
+        # Need to enable IMAP for this step to success
+        # https://support.google.com/mail/answer/7126229?hl=en
+        # And allow less secure apps
+        # https://myaccount.google.com/lesssecureapps
+        # Display unlock captcha
+        # https://accounts.google.com/b/0/DisplayUnlockCaptcha
+      
