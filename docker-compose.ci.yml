@@ -8,7 +8,7 @@ services:
       - "./selenoid-outputs/logs:/opt/selenoid/logs"
     command: [
         "-conf", # Flag for browsers configuration
-        "/usr/bin/selenoid/", # Location for browsers configuration file
+        "/etc/selenoid/browsers.json", # Location for browsers configuration file
         "-container-network", # Network to be used for containers - flag
         "selenoid", # network name
         "-log-output-dir", # Flag to save logs in a directory
