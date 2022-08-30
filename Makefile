@@ -55,5 +55,4 @@ local-down:
 	docker-compose -f docker-compose.yml -f docker-compose.local.yml down
 
 ci-up:
-	$(info Make: Starting docker in CI env)
-	docker-compose -f docker-compose.yml -f docker-compose.ci.yml up --abort-on-container-exit --exit-code-from e2e
+	@docker-compose -f docker-compose.yml -f docker-compose.ci.yml up --abort-on-container-exit --exit-code-from e2e
