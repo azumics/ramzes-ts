@@ -47,11 +47,11 @@ jobs:
           allure_results: allure-results
           allure_history: allure-history
           keep_reports: 20
-
-        # Need to enable IMAP for this step to success
-        # https://support.google.com/mail/answer/7126229?hl=en
-        # And allow less secure apps
-        # https://myaccount.google.com/lesssecureapps
-        # Display unlock captcha
-        # https://accounts.google.com/b/0/DisplayUnlockCaptcha
-      
+          
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
