@@ -17,10 +17,10 @@ endef
 
 
 #Command 'run-test' will help you raise up containers for crossbrowser testing in grid
-run-test: 
+test: 
 	@npx wdio wdio.conf.ts
 
-local-build:
+build:
 	$(info Make: Building docker images in local env)
 	docker-compose -f docker-compose.yml -f docker-compose.local.yml build
 
