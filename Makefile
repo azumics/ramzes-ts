@@ -16,22 +16,26 @@ $(subst \033,\x1b,$(1))
 endef
 
 
-#Command 'run-test' will help you raise up containers for crossbrowser testing in grid
+#Command 'run-test' will help you raise up containers for run testing in basic mode
 test: 
 	@npx wdio wdio.conf.ts
 
+#Command 'build' will help to build your containers for run testing in container mode
 build:
 	$(info Make: Building docker images in local env)
 	docker-compose -f docker-compose.yml -f docker-compose.local.yml build
 
+#Command 'local-up' will help to run your tests in containers 
 local-up:
 	$(info Make: Starting docker in local env)
-	docker-compose -f docker-compose.yml -f docker-compose.local.yml up
+	docker-compose -f docker-compose.yml -f docker-compose.local.yml up --abort-on-container-exit --exit-code-from e2e
 
+#Command 'local-down' is shutting down your containers 
 local-down:
 	$(info Make: Stopping docker in local env)
 	docker-compose -f docker-compose.yml -f docker-compose.local.yml down
 
+#Serve this command for running tests in CI environment
 ci-up:
 	$(info Make: Starting docker in CI env)
 	docker-compose -f docker-compose.yml -f docker-compose.ci.yml up --abort-on-container-exit --exit-code-from e2e
