@@ -21,9 +21,8 @@ test:
 	@npx wdio wdio.conf.ts
 
 #Command 'build' will help to build your containers for run testing in container mode
-build:
-	$(info Make: Building docker images in local env)
-	docker-compose -f docker-compose.yml -f docker-compose.local.yml build
+install:
+	@docker-compose -f docker-compose.yml -f docker-compose.local.yml build
 
 #Command 'local-run' will help to run your tests in containers 
 local-run:

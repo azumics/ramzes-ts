@@ -2,13 +2,13 @@
     "chrome": {
         "default": "96.0",
         "versions": {
-            "104.0": {
-                "image": "selenoid/chrome:104.0",
+            "103.0": {
+                "image": "selenoid/vnc_chrome:103.0",
                 "port": "4444",
                 "path": "/"
             },
             "96.0": {
-                "image": "selenoid/chrome:96.0",
+                "image": "selenoid/vnc_chrome:96.0",
                 "port": "4444",
                 "path": "/"
             }
@@ -18,7 +18,7 @@
         "default": "103.0",
         "versions": {
             "103.0": {
-                "image": "selenoid/firefox:103.0",
+                "image": "selenoid/vnc_firefox:103.0",
                 "port": "4444",
                 "path": "/wd/hub"
             }
