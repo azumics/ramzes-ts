@@ -17,7 +17,7 @@ https://webdriver.io/docs/api/
 
 <h2>How to run tests?</h2>
 
-Firstly, you need to check presence of tests in *tests/specs/*.ts 
+Firstly, you need to check presence of tests in  <em><strong>tests/specs/*.ts</strong></em>  then run <em><strong>"npm install"</strong></em> command to get all dependencies.
 
 ![tests2](https://user-images.githubusercontent.com/61021061/188141127-81e6a8fa-7122-46e6-81ab-edb5984c9a18.png)
 
