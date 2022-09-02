@@ -29,5 +29,5 @@ In Makefile you can find special commands to run the project locally or in CI en
 ![Makefile1](https://user-images.githubusercontent.com/61021061/188140460-4402c994-0fbb-425f-8c0c-29f289add200.png)
 
 <h2>Steps for running tests locally</h2>
-<h4> 1) Build the project with command "make build" </h4>
+<h4> 1) Build the project with command "make install" </h4>
 <h4> 2) Run tests with command "make local-run" </h4>
