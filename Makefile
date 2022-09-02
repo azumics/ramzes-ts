@@ -25,17 +25,17 @@ build:
 	$(info Make: Building docker images in local env)
 	docker-compose -f docker-compose.yml -f docker-compose.local.yml build
 
-#Command 'local-up' will help to run your tests in containers 
-local-up:
+#Command 'local-run' will help to run your tests in containers 
+local-run:
 	$(info Make: Starting docker in local env)
 	docker-compose -f docker-compose.yml -f docker-compose.local.yml up --abort-on-container-exit --exit-code-from e2e
 
-#Command 'local-down' is shutting down your containers 
-local-down:
+#Command 'local-stop' is shutting down your containers 
+local-stop:
 	$(info Make: Stopping docker in local env)
 	docker-compose -f docker-compose.yml -f docker-compose.local.yml down
 
 #Serve this command for running tests in CI environment
-ci-up:
+ci-run:
 	$(info Make: Starting docker in CI env)
 	docker-compose -f docker-compose.yml -f docker-compose.ci.yml up --abort-on-container-exit --exit-code-from e2e
