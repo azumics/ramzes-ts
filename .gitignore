@@ -13,7 +13,7 @@ last-history/
 # Compiled Java class files
 *.class
 
-# Compiled Python bytecode
+# Compiled Pythhon bytecode
 *.py[cod]
 
 # Log files
