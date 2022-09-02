@@ -1,4 +1,4 @@
-# Ramzes-ts 
+# Ramzes-ts framework
 This is an assembly of libraries for automated testing in a web environment. 
 For our project we use the work of many authors and ready-made templates, which we will note below
 
