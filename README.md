@@ -17,7 +17,9 @@ https://webdriver.io/docs/api/
 
 <h2>Modes for running tests</h2>  
 <h3>Preconditions</h3>  
-!!! <strong>IMPORTANT</strong> !!!  
+!!! <strong>IMPORTANT</strong> !!!
+
+
   Check the presence of .env file, if you don't have this file - run <strong><em>"make .env"</strong></em>  
 
 <h3>Local mode - running tests on local machine (NO CONTAINERS)</h3> 
