@@ -17,7 +17,8 @@ https://webdriver.io/docs/api/
 
 <h2>Modes for running tests</h2>  
 <h3>Preconditions</h3>  
-- Check the presence of .env file, if you don't have this file - run <strong><em>"make .env"</strong></em>  
+!!! <strong>IMPORTANT</strong> !!!
+Check the presence of .env file, if you don't have this file - run <strong><em>"make .env"</strong></em>  
 
 <h3>Local mode - running tests on local machine (NO CONTAINERS)</h3> 
  
@@ -27,7 +28,9 @@ https://webdriver.io/docs/api/
 
 3) Make sure that your <em>chromedriver</em> version matches the version of the browser installed on your machine
  
-4) Run <strong><em>"make test-local-machine"</strong></em>  
+4) Run <strong><em>"make test-local-machine"</strong></em> to execute your tests
+
+5) Run <strong><em>"make test-report"</strong></em> to generate and open allure report
 
 <h3>Local mode - running tests on local machine (CONTAINERS)</h3> 
 
