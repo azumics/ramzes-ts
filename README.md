@@ -15,19 +15,24 @@ https://medium.com/testvagrant/running-webdriverio-tests-in-containers-871e0238e
 https://webdriver.io/docs/api/
 
 
-<h2>How to run tests?</h2>
+<h2>Modes for running tests</h2>
+<h3>Preparation</h3>
+1) Check the presence of .env file , if you don't have this file - run <strong><em>"make .env"</strong></em>
 
-Firstly, you need to check presence of tests in  <em><strong>tests/specs/*.ts</strong></em>  then run <em><strong>"npm install"</strong></em> command to get all dependencies.
+<h3>Local mode - running tests on local machine (NO CONTAINERS)</h3>
+1) Check the presence of chromedriver,geckodirver etc. on your local machine.
+2) Run <strong><em> "npm install"</strong></em> to get all dependencies.
+3) Change configuration file <strong><em>wdio.conf.ts</strong></em> for your requirements.
+4) Run <strong><em>"make test-local-machine"</strong></em>
 
-![tests2](https://user-images.githubusercontent.com/61021061/188141127-81e6a8fa-7122-46e6-81ab-edb5984c9a18.png)
+<h3>Local mode - running tests on local machine (CONTAINERS)</h3>
+1) Run "make install" to make your project build image.
+2) Change configuration file <strong><em>wdio.selenoid.conf.ts</strong></em> for your requirements.
+3) Run <strong><em>"make test-local-containers"</strong></em> to run your tests.
 
-<em><strong>Don't forget to create your own .env file from env.sample file.</strong></em>.
+<h3>CI mode - running tests on CI environment</h3>
+
+-For making a build on CI we just need run command  <strong><em>"make test-ci"</strong></em>, before that we need to pull our repo to the job(CI machine)
+-For example of using .yml files for your CI you can check great post of Madhank that I marked above.
 
 
-In Makefile you can find special commands to run the project locally or in CI environment : 
-
-![Makefile1](https://user-images.githubusercontent.com/61021061/188140460-4402c994-0fbb-425f-8c0c-29f289add200.png)
-
-<h2>Steps for running tests locally</h2>
-<h4> 1) Build the project with command "make install" </h4>
-<h4> 2) Run tests with command "make local-run" </h4>
