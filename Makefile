@@ -51,3 +51,7 @@ test-ci:
 		cp .env.example .env; \
 		exit 1; \
 	fi	
+
+test-report:
+	$(info Make : Creating Allure test report)
+	allure generate ./allure-results --clean  && allure open
