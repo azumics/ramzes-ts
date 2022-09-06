@@ -21,7 +21,7 @@ https://webdriver.io/docs/api/
 
 <h3>Local mode - running tests on local machine (NO CONTAINERS)</h3> 
 
-1) Check the presence of chromedriver,geckodirver etc. on your local machine.
+1) Check the presence of chromedriver, geckodirver etc. on your local machine.
  
 2) Run <strong><em> "npm install"</strong></em> to get all dependencies.  
 
