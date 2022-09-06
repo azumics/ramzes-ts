@@ -42,6 +42,8 @@ https://webdriver.io/docs/api/
  
 3) Run <strong><em>"make test-local-containers"</strong></em> to run your tests.  
 
+4) Run <strong><em>"make test-report"</strong></em> to generate and open allure report
+
 
 <h3>CI mode - running tests on CI environment</h3>  
 
