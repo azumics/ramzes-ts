@@ -17,7 +17,7 @@ endef
 
 
 #Command 'run-test' will help you raise up containers for run testing in basic mode
-test: 
+test-local-machine: 
 	@npx wdio wdio.conf.ts
 
 #Command 'build' will help to build your containers for run testing in container mode
@@ -25,16 +25,29 @@ install:
 	@docker-compose -f docker-compose.yml -f docker-compose.local.yml build
 
 #Command 'local-run' will help to run your tests in containers 
-local-run:
+test-local-containers:
 	$(info Make: Starting docker in local env)
 	docker-compose -f docker-compose.yml -f docker-compose.local.yml up --abort-on-container-exit --exit-code-from e2e
 
 #Command 'local-stop' is shutting down your containers 
-local-stop:
+test-local-stop:
 	$(info Make: Stopping docker in local env)
 	docker-compose -f docker-compose.yml -f docker-compose.local.yml down
 
 #Serve this command for running tests in CI environment
-ci-run:
+test-ci:
 	$(info Make: Starting docker in CI env)
 	docker-compose -f docker-compose.yml -f docker-compose.ci.yml up --abort-on-container-exit --exit-code-from e2e
+
+.env: .env.example
+	@if [ -f .env ]; \
+	then \
+		echo "\n$(YELLOW)Notice:$(RESET) $(BLUE).env.example$(RESET) has changed"; \
+		touch .env; \
+	else \
+		echo "$(RED)Warning:$(RESET) No $(BLUE).env$(RESET) found - creating from $(BLUE).env.example$(RESET)\n"; \
+		echo "Please update your configuration."; \
+		echo cp .env.example .env; \
+		cp .env.example .env; \
+		exit 1; \
+	fi	
