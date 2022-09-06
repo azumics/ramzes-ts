@@ -19,7 +19,8 @@ https://webdriver.io/docs/api/
 <h3>Preparation</h3>  
 1) Check the presence of .env file , if you don't have this file - run <strong><em>"make .env"</strong></em>  
 
-<h3>Local mode - running tests on local machine (NO CONTAINERS)</h3>  
+<h3>Local mode - running tests on local machine (NO CONTAINERS)</h3> 
+
 1) Check the presence of chromedriver,geckodirver etc. on your local machine.
  
 2) Run <strong><em> "npm install"</strong></em> to get all dependencies.  
@@ -28,7 +29,8 @@ https://webdriver.io/docs/api/
  
 4) Run <strong><em>"make test-local-machine"</strong></em>  
 
-<h3>Local mode - running tests on local machine (CONTAINERS)</h3>  
+<h3>Local mode - running tests on local machine (CONTAINERS)</h3> 
+
 1) Run <strong><em>"make install"</strong></em> to make your project build image. 
   
 2) Change configuration file <strong><em>wdio.selenoid.conf.ts</strong></em> for your requirements.  
