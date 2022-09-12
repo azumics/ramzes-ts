@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Sep 12 18:53:51 GMT 2022","Mon Sep 12 18:53:52 GMT 2022","438","","Base page test","","Base page test","GET test request /api/users/2","GET test request /api/users/2",""
+"passed","Mon Sep 12 18:53:52 GMT 2022","Mon Sep 12 18:53:52 GMT 2022","484","","Base page test","","Base page test","POST test request","POST test request",""
+"passed","Mon Sep 12 18:53:51 GMT 2022","Mon Sep 12 18:53:54 GMT 2022","2515","","My Login application","","My Login application","should login with valid credentials","should login with valid credentials",""
+"passed","Mon Sep 12 18:53:50 GMT 2022","Mon Sep 12 18:53:59 GMT 2022","8410","","Base page test","","Base page test","Signing in","Signing in",""
+"passed","Mon Sep 12 18:53:52 GMT 2022","Mon Sep 12 18:53:54 GMT 2022","1824","","Base page test","","Base page test","MOCK test request","MOCK test request",""
