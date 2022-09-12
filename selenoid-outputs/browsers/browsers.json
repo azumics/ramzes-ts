@@ -2,7 +2,7 @@
     "chrome": {
         "default": "103.0",
         "versions": {
-            "104.0": {
+            "103.0": {
                 "image": "selenoid/chrome:103.0", 
                 "port": "4444",
                 "path": "/"
