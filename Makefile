@@ -52,6 +52,11 @@ test-ci:
 		exit 1; \
 	fi	
 
+
+#Command to create Allure test report	
 test-report:
-	$(info Make : Creating Allure test report)
-	allure generate ./allure-results --clean  && allure open
+	@if [ true ]; \
+	then \
+		echo "\n$(YELLOW)ALLURE LINK:$(RESET) $(GREEN)http://localhost:5050/allure-docker-service/projects/default/reports/latest/index.html$(RESET)"; \
+		docker-compose -f docker-compose.allure.yml up; \
+	fi	
