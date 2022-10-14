@@ -28,5 +28,9 @@
         "wdio-selenoid-standalone-service": "^1.0.0",
         "wdio-slack-service": "^2.0.9",
         "wdio-ui5-service": "^0.7.0"
-    }    
+    },
+    "engines" : { 
+        "node" : "15.5.0",
+        "npm" :  "7.3.0"
+        }
 }
