@@ -1,4 +1,4 @@
-![example workflow](https://github.com/azumics/ramzes-ts/actions/workflows/ci-flow.yml/badge.svg) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+![example workflow](https://github.com/azumics/ramzes-ts/actions/workflows/ci-flow.yml/badge.svg) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com) ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
 
 # Ramzes-ts
  This is an assembly of libraries for automated testing in a web environment
